@@ -382,10 +382,12 @@
 		502296E716EE7332001D2E46 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: C R Yevpak (26S7LMSLZ8)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Jenkins Testing/Jenkins Testing-Prefix.pch";
 				INFOPLIST_FILE = "Jenkins Testing/Jenkins Testing-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "6D47A6EB-B2CF-430E-A4DD-38FC0ECEDB54";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -393,10 +395,12 @@
 		502296E816EE7332001D2E46 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: C R Yevpak (26S7LMSLZ8)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Jenkins Testing/Jenkins Testing-Prefix.pch";
 				INFOPLIST_FILE = "Jenkins Testing/Jenkins Testing-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "6D47A6EB-B2CF-430E-A4DD-38FC0ECEDB54";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
