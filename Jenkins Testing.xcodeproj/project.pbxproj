@@ -21,11 +21,10 @@
 		5022972016EFCD87001D2E46 /* Calculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 5022971F16EFCD87001D2E46 /* Calculator.m */; };
 		5048500716EFD1570020C8BA /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 502296D516EE7332001D2E46 /* SenTestingKit.framework */; };
 		5048500E16EFD3110020C8BA /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 502296D516EE7332001D2E46 /* SenTestingKit.framework */; };
-		5048501016EFD3110020C8BA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5048500F16EFD3110020C8BA /* Cocoa.framework */; };
 		5048501616EFD3110020C8BA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5048501416EFD3110020C8BA /* InfoPlist.strings */; };
 		5048501916EFD3110020C8BA /* JenkinsLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = 5048501816EFD3110020C8BA /* JenkinsLogic.m */; };
-		5048501E16EFD45C0020C8BA /* Calculator.h in Sources */ = {isa = PBXBuildFile; fileRef = 5022971E16EFCD87001D2E46 /* Calculator.h */; };
 		5048501F16EFD45C0020C8BA /* Calculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 5022971F16EFCD87001D2E46 /* Calculator.m */; };
+		5048502016EFDCE10020C8BA /* Calculator.h in Sources */ = {isa = PBXBuildFile; fileRef = 5022971E16EFCD87001D2E46 /* Calculator.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,7 +51,6 @@
 		5022971E16EFCD87001D2E46 /* Calculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Calculator.h; sourceTree = "<group>"; };
 		5022971F16EFCD87001D2E46 /* Calculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Calculator.m; sourceTree = "<group>"; };
 		5048500D16EFD3110020C8BA /* JenkinsLogic.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JenkinsLogic.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5048500F16EFD3110020C8BA /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		5048501316EFD3110020C8BA /* JenkinsLogic-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JenkinsLogic-Info.plist"; sourceTree = "<group>"; };
 		5048501516EFD3110020C8BA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5048501716EFD3110020C8BA /* JenkinsLogic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JenkinsLogic.h; sourceTree = "<group>"; };
@@ -77,7 +75,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5048500E16EFD3110020C8BA /* SenTestingKit.framework in Frameworks */,
-				5048501016EFD3110020C8BA /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,7 +107,6 @@
 				502296B316EE7332001D2E46 /* Foundation.framework */,
 				502296B516EE7332001D2E46 /* CoreGraphics.framework */,
 				502296D516EE7332001D2E46 /* SenTestingKit.framework */,
-				5048500F16EFD3110020C8BA /* Cocoa.framework */,
 				502296F516EE8550001D2E46 /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -296,7 +292,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5048501E16EFD45C0020C8BA /* Calculator.h in Sources */,
+				5048502016EFDCE10020C8BA /* Calculator.h in Sources */,
 				5048501F16EFD45C0020C8BA /* Calculator.m in Sources */,
 				5048501916EFD3110020C8BA /* JenkinsLogic.m in Sources */,
 			);
@@ -425,9 +421,9 @@
 		5048501C16EFD3110020C8BA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS = "$(SDKROOT)/Developer/Library/Frameworks";
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JenkinsLogic/JenkinsLogic-Prefix.pch";
@@ -435,7 +431,7 @@
 				INFOPLIST_FILE = "JenkinsLogic/JenkinsLogic-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
+				SDKROOT = iphoneos;
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
@@ -443,10 +439,10 @@
 		5048501D16EFD3110020C8BA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS = "$(SDKROOT)/Developer/Library/Frameworks";
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JenkinsLogic/JenkinsLogic-Prefix.pch";
@@ -454,7 +450,7 @@
 				INFOPLIST_FILE = "JenkinsLogic/JenkinsLogic-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
+				SDKROOT = iphoneos;
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
