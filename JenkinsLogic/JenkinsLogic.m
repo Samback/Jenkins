@@ -29,7 +29,7 @@
 {
     Calculator *calc = [[Calculator alloc] init];
     STAssertEquals([calc addItem:1 toItem:2], 3, @"Add 1 + 2 ");
-//    STAssertEquals([calc addItem:2 toItem:2], 3, @"Add 2 + 2 ");
+    STAssertEquals([calc addItem:2 toItem:2], 3, @"Add 2 + 2 ");
 }
 
 @end
